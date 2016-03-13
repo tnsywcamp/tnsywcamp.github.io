@@ -46,19 +46,19 @@ layout: default
   </div>
 </article>
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTrns7kOi-WxTG7d-IrwzApkn4JvlCL5c&callback=initMap"
-  type="text/javascript"></script>
-
 <script>
     var markers = [
+        {% for location in page.locations %}
             ['{{ page.location.name }}', {{ page.location.latitude }}, {{ page.location.longitude }}]
+            {% unless forloop.last %},{% endunless %}
+        {% endfor %}
     ];
 </script>
 
 <script>
     var map;
 
-    function initialize() {
+    function initMap() {
         var map;
         var bounds = new google.maps.LatLngBounds();
         var mapOptions = {
@@ -87,5 +87,8 @@ layout: default
 
     }
 
-    google.maps.event.addDomListener(window, 'load', initialize);
+    google.maps.event.addDomListener(window, 'load', initMap);
 </script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTrns7kOi-WxTG7d-IrwzApkn4JvlCL5c&callback=initMap"
+  type="text/javascript"></script>

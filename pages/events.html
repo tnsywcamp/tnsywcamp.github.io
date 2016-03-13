@@ -30,7 +30,7 @@ description: add a short introduction to the events you organise here
         </a>
       </ul><!-- End social shares -->
       <span class="event-meta">{{ event.start-date | date: '%R, %b %-d, %Y' }}</span>
-      <a href="{{ event.url }}"><h2>{{ event.title }}</h2></a>
+      <a href="{{ event.url | prepend: site.baseurl }}"><h2>{{ event.title }}</h2></a>
 
       {% if event.location %}
       <span class="event-icon">
