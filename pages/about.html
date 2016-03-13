@@ -76,7 +76,7 @@ permalink: /about/
 <script>
     var map;
 
-    function initialize() {
+    function initMap() {
         var map;
         var bounds = new google.maps.LatLngBounds();
         var mapOptions = {
@@ -105,5 +105,5 @@ permalink: /about/
 
     }
 
-    google.maps.event.addDomListener(window, 'load', initialize);
+    google.maps.event.addDomListener(window, 'load', initMap);
 </script>
