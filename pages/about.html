@@ -40,7 +40,7 @@ permalink: /about/
 {% endif %}<!-- End team members -->
 <!-- Careers link -->
 {% if site.data.career-vacancies.size > 0 %}
-<a href="/careers" title="{{ site.title | prepend: 'Careers at '}}" class="careers-link">
+<a href="{{ '/careers' | prepend: site.baseurl }}" title="{{ site.title | prepend: 'Careers at '}}" class="careers-link">
   <h2>we're hiring!</h2>
   <p>{{ site.title | prepend: 'See all current vacancies at ' }}</p>
 </a><!-- End careers link -->

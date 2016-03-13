@@ -17,7 +17,7 @@ permalink: /resources/
       <p>{{ resource.description | truncatewords: 30 }}</p>
     </a>
 
-    <a href="{{ resource.path }}" class="index-button">read the document</a>
+    <a href="{{ resource.path | prepend: site.baseurl }}" class="index-button">read the document</a>
   </li>
 {% endfor %}
 </ul>

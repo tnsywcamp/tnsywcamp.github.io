@@ -8,7 +8,7 @@ description: add a short introduction to the issues you address here
   <ul class="grid-container">
   {% for issue in site.issues %}
     {% unless issue.title == page.title %}
-    <a href="{{ issue.url }}">
+    <a href="{{ issue.url | prepend: site.baseurl }}">
       {% if forloop.length == 2 %}
       <li class="one-whole col">
       {% elsif forloop.length == 3 %}

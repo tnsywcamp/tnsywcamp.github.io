@@ -9,7 +9,7 @@ permalink: /services/
   <ul class="grid-container">
   {% for service in site.services %}
     {% unless service.title == page.title %}
-    <a href="{{ service.url }}">
+    <a href="{{ service.url | prepend: site.baseurl }}">
       {% if forloop.length == 2 %}
       <li class="one-whole col">
       {% elsif forloop.length == 3 %}
