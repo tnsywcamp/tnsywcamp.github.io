@@ -69,6 +69,11 @@ prose:
     - /_layouts
     - /_includes
     - /_sass
+    - /css
+    - /_site
+    - Gemfile
+    - Gemfile.lock
+    - feed.xml
   metadata:
     _posts:
       - name: "layout"
