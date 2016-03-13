@@ -9,7 +9,7 @@
 title: JekyllOrg
 description: > # this means to ignore newlines until "baseurl:"
   a free Jekyll theme for organizations and non-profits
-baseurl: "jekyllorg" # the subpath of your site, e.g. /blog
+baseurl: "/jekyllorg" # the subpath of your site, e.g. /blog
 url: "https://damianeoloan.github.io" # the base hostname & protocol for your site
 
 # Profiles
