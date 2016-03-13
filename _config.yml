@@ -63,7 +63,6 @@ collections:
 
 # Prose
 prose:
-  rooturl: '/'
   siteurl: 'https://damianeoloan.github.io/jekyllorg'
   media: 'images'
   ignore:
@@ -71,3 +70,79 @@ prose:
     - /_includes
     - /_sass
   metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "title"
+        field:
+          element: "textarea"
+          placeholder: "Add your post title here"
+    _services:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "service"
+      - name: "title"
+        field:
+          element: "textarea"
+          placeholder: "Add your service title here"
+      - name: "description"
+        field:
+          element: "textarea"
+          placeholder: "Add a short description of your service here"
+      - name: "related"
+        field:
+          element: "textarea"
+          placeholder: "Add the titles of related services here"
+    _issues:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "issue"
+      - name: "title"
+        field:
+          element: "textarea"
+          placeholder: "Add a title for the issue you address here"
+      - name: "description"
+        field:
+          element: "textarea"
+          placeholder: "Add a short description of how you address the issue here"
+      - name: "related"
+        field:
+          element: "textarea"
+          placeholder: "Add the titles of related issues here"
+    _events:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "event"
+      - name: "title"
+        field:
+          element: "textarea"
+          placeholder: "Add a title for your event here"
+      - name: "description"
+        field:
+          element: "textarea"
+          placeholder: "Add a short description of your event here"
+      - name: "start-date"
+        field:
+          element: "textarea"
+          placeholder: "Add the event date / time in the format YYYY-MM-DD HH:MM"
+      - name: "end-date"
+        field:
+          element: "textarea"
+          placeholder: "You can optionally define an end date / time  for your event in the format YYYY-MM-DD HH:MM"
+      - name: "name"
+        field:
+          element: "textarea"
+          placeholder: "Street address, for display purposes only"
+      - name: "latitude"
+        field:
+          element: "textarea"
+          placeholder: "The latitude (usually first) value of the location"
+      - name: "longitude"
+        field:
+          element: "textarea"
+          placeholder: "The longitude (usually second) value of the location"
