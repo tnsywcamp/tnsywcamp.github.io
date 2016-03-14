@@ -116,6 +116,7 @@ nav.menu {
     @include media-query($on-mobile) {
       font-size: 1.8rem;
       font-weight: 400;
+      margin: 0 $spacing-unit/3;
     }
 
     &:after {
@@ -324,8 +325,7 @@ div.text-box {
   img {
     margin: 0;
     max-width: 100%;
-    min-height: 100%;
-    width: auto;
+    height: 100%;
   }
 
   div.text-box { padding: 0; }

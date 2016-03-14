@@ -437,9 +437,11 @@ nav.menu {
   top: 20%;
   max-width: 95%;
   margin: 0 auto; }
-  nav.menu a.nav-title h1, nav.menu a.nav-link {
-    font-size: 5rem;
+  nav.menu a.nav-title, nav.menu a.nav-link {
     text-decoration: none; }
+    @media screen and (max-width: 600px) {
+      nav.menu a.nav-title h1, nav.menu a.nav-link h1 {
+        font-size: 5rem; } }
   nav.menu a.nav-link {
     display: inline-block;
     clear: none;
@@ -637,8 +639,7 @@ div.text-box {
   .page-header img {
     margin: 0;
     max-width: 100%;
-    min-height: 100%;
-    width: auto; }
+    height: 100%; }
   .page-header div.text-box {
     padding: 0; }
   .page-header h1, .page-header p {
