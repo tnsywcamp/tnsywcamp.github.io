@@ -367,13 +367,14 @@ section#services-container, section#related-sections {
   * {
     box-sizing: border-box;
     line-height: 1.2;
-    margin: 0;
   }
   a li {
     display: inline-block;
     padding: 0 2.5%;
     color: $white-color;
     text-align: center;
+
+    img { margin: 0; }
     div.mask { @extend %ease-in; }
 
     div.tn-container {
