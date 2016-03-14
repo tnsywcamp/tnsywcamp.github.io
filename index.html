@@ -9,10 +9,9 @@ layout: default
       <img src="{{ 'home' | append: '.jpg' | prepend: '/images/featured/' | prepend: site.baseurl }}" alt="{{ page.title | append: ' featured image' }}" class="page-hero" />
       <div class="text-box">
         <p>{{ site.description }}</p>
-        <h1 class="page-title">{{ site.name }}</h1>
 
         <nav class="menu">
-          <a href="{{ '/' | prepend: site.baseurl }}" class="nav-title"><h1>{{ site.title }}</h1></a>
+          <a href="{{ '/' | prepend: site.baseurl }}" class="nav-title {% if site.title.size > 9 %}long-title{% endif %}"><h1>{{ site.title }}</h1></a>
           {% for link in site.data.nav-links %}
             <a class="nav-link" href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a>
           {% endfor %}

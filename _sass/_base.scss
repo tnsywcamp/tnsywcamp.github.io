@@ -94,6 +94,7 @@ ul.grid-container {
  */
 table {
   margin: 0 auto $spacing-unit;
+  max-width: 80%;
   * {
     padding: .2rem .5rem;
   }
@@ -149,7 +150,7 @@ table {
   	letter-spacing: 0.1;
   }
 
-  p, span, figcaption, ol li, ul li {
+  p, span, figcaption, ol li, ul li, td {
     font-size: 2.2rem;
     line-height: 1.8;
     font-weight: $base-font-weight;
@@ -174,7 +175,7 @@ table {
     	font-size: 1.6rem;
     }
 
-    p, span, figcaption, ol li, ul li {
+    p, span, figcaption, ol li, ul li, td {
       font-size: 2.2rem;
     }
   }
@@ -197,7 +198,7 @@ table {
     h6 {
       font-size: 1.6rem;
     }
-    p, span, figcaption, ol li, ul li {
+    p, span, figcaption, ol li, ul li, td {
       font-size: 2rem;
     }
   }
@@ -219,44 +220,44 @@ table {
       font-size: 2.0rem;
     }
     h6 {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
     }
-    p, span, figcaption, ol li, ul li {
+    p, span, figcaption, ol li, ul li, td {
       font-size: 1.6rem;
-    }
-  }
-
-  @include media-query($on-mobile) {
-    h1 {
-      font-size: 2.5rem;
-    }
-    h2 {
-      font-size: 2.3rem;
-    }
-    h3 {
-      font-size: 2.1rem;
-    }
-    h4 {
-      font-size: 2.0rem;
-    }
-    h5 {
-      font-size: 1.8rem;
-    }
-    h6 {
-      font-size: 1.6rem;
-    }
-    p, span, figure figcaption, ol li, ul li {
-      font-size: 1.8rem;
-      line-height: 2.7rem;
-    }
-    h1, h2, h3, h4, h5, h6, p, figcaption {
-      -webkit-font-smoothing: subpixel-antialiased;
     }
   }
 /**
  * Links
  */
+ %link {
+   color: $dark-grey;
+   position: relative;
+   text-decoration: none;
+   border-bottom: .2rem solid $blue-color;
 
+   &:visited {
+     color: lighten($dark-grey, 10%);
+   }
+
+   &:hover {
+     color: $dark-grey;
+   }
+
+   &:before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     width: 0%;
+     height: 100%;
+     background: rgba(229,229,229,0.4);
+     @extend %ease-in;
+   }
+   &:hover:before {
+     width: 100%;
+   }
+ }
 /**
  * Blockquotes
  */
@@ -280,6 +281,7 @@ blockquote {
     font-size: 5rem;
     color: $grey-color;
   }
+  @include media-query($on-tablet) { max-width: 80%;}
 }
 /**
  * Code formatting
