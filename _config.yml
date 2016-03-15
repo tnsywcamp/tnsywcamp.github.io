@@ -77,7 +77,7 @@ prose:
     - /.sass-cache
     - README.md
   metadata:
-    blog/_posts:
+    /_posts:
       - name: "layout"
         field:
           element: "hidden"
@@ -86,7 +86,7 @@ prose:
         field:
           element: "textarea"
           placeholder: "Add your post title here"
-    _services:
+    /_services:
       - name: "layout"
         field:
           element: "hidden"
@@ -103,7 +103,7 @@ prose:
         field:
           element: "textarea"
           placeholder: "Add the titles of related services here"
-    _issues:
+    /_issues:
       - name: "layout"
         field:
           element: "hidden"
@@ -120,7 +120,7 @@ prose:
         field:
           element: "textarea"
           placeholder: "Add the titles of related issues here"
-    _events:
+    /_events:
       - name: "layout"
         field:
           element: "hidden"
