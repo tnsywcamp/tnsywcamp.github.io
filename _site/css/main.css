@@ -362,7 +362,7 @@ div.row div {
  */
 .site-header {
   width: 100%;
-  border-top: 0.25rem solid #e5e5e5;
+  border-top: 0.1rem solid #e5e5e5;
   background: #fdfdfd; }
 
 .site-title h1 {
@@ -631,7 +631,7 @@ div.text-box {
 .page-header {
   position: relative;
   display: block;
-  margin: 1rem 0 2rem;
+  margin: 0 0 2rem;
   padding: 0;
   min-height: 50vh;
   max-height: 80vh;

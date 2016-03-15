@@ -1,5 +1,5 @@
 <header class="site-header">
-  {% unless page.url == '/' %}<a class="site-title" href="{{ site.baseurl }}"><h1>{{ site.title }}</h1></a>{% endunless %}
+  {% unless page.url == '/' %}<a class="site-title" href="{{ site.baseurl | prepend: site.url }}"><h1>{{ site.title }}</h1></a>
 
   <input id="ctrl" name="ctrl" type="checkbox"></input>
 
@@ -44,4 +44,4 @@
       <div class="nav-border"></div>
     </nav>
   </div>
-</header>
+</header>{% endunless %}

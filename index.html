@@ -64,7 +64,7 @@ layout: default
         {% if forloop.length <= 2 %}
         <li class="one-whole col">
         {% else %}
-        <li class="one-third col">
+        <li class="one-third col{% if forloop.last == true %} final-col{% endif %}">
         {% endif %}
           <div class="tn-container">
             <img src="{{ 'services-tn.jpg' | prepend: '/images/featured/' | prepend: site.baseurl }}" alt="{{  }}" />
@@ -144,7 +144,7 @@ layout: default
         {% if forloop.length <= 2 %}
         <li class="one-whole col">
         {% else %}
-        <li class="one-third col">
+        <li class="one-third col{% if forloop.last == true %} final-col{% endif %}">
           {% endif %}
           <div class="tn-container">
             <img src="{{ 'issues-tn.jpg' | prepend: '/images/featured/' | prepend: site.baseurl }}" alt="{{  }}" />
