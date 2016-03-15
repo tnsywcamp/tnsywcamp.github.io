@@ -3,6 +3,7 @@ layout: page
 title: Resources
 description: add a short introduction to your policy papers, briefing notes, etc. here
 permalink: /resources/
+related: issues services events
 ---
 <ul class="post-list resource-index">
 {% for resource in site.data.resources %}
@@ -21,3 +22,5 @@ permalink: /resources/
   </li>
 {% endfor %}
 </ul>
+
+{% include related-sections.html %}
