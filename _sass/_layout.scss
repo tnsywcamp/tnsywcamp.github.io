@@ -117,6 +117,9 @@ nav.menu {
       font-size: 1.8rem;
       font-weight: 400;
       margin: 0 $spacing-unit/3;
+      &:not(:last-of-type) {
+        margin: $spacing-unit/4;
+      }
     }
 
     &:after {
@@ -307,7 +310,6 @@ div.text-box {
   color: $white-color;
   text-align: center;
   @include media-query($on-tablet) { bottom: 5%; }
-  @include media-query($on-mobile) { bottom: 2.5%; }
 }
 
 /**
@@ -322,10 +324,19 @@ div.text-box {
   max-height: 80vh;
   overflow: hidden;
 
-  img {
+  img.page-hero {
     margin: 0;
-    max-width: 100%;
-    height: 100%;
+    width: 100%;
+    height: auto;
+    @include media-query($on-mobile) { display: none; }
+  }
+
+  img.mobile-hero {
+    display: none;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    @include media-query($on-mobile) { display: block; }
   }
 
   div.text-box { padding: 0; }
@@ -373,7 +384,7 @@ section#services-container, section#related-sections {
     padding: 0 2.5%;
     color: $white-color;
     text-align: center;
-
+    margin-bottom: $spacing-unit; 
     img { margin: 0; }
     div.mask { @extend %ease-in; }
 
@@ -393,7 +404,7 @@ section#services-container, section#related-sections {
     @include media-query($on-mobile) {
       float: none;
       display: block;
-      width: 85%;
+      width: 100%;
       margin: 0 auto $spacing-unit;
     }
   }
@@ -410,10 +421,6 @@ section#services-container, section#related-sections {
   a li.final-col {
     @include media-query($on-tablet) { margin: $spacing-unit 25%; }
     @include media-query($on-mobile) { margin: auto; }
-  }
-
-  a.button {
-    margin: $spacing-unit auto;
   }
 }
 
@@ -490,7 +497,7 @@ section#services-container, section#related-sections {
   }
 
   @include media-query($on-desktop) { width: 66.66666666%; }
-  @include media-query($on-mobile) { width: 90%; }
+  @include media-query($on-mobile) { width: 80%; }
 }
 
 .post-meta {
@@ -669,7 +676,7 @@ ul.events-index {
   h2:hover { color: $blue-color; }
 
   @include media-query($on-desktop) { width: 66.66666666%; }
-  @include media-query($on-mobile) { width:85%; }
+  @include media-query($on-mobile) { width:80%; }
 }
 
 span.event-icon {
