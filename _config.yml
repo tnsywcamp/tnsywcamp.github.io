@@ -74,6 +74,8 @@ prose:
     - Gemfile
     - Gemfile.lock
     - feed.xml
+    - /.sass-cache
+    - README.md
   metadata:
     blog/_posts:
       - name: "layout"

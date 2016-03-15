@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="{% for member in site.data.team-members %}{{ member.name }}{% unless forloop.last == true %}, {% endunless %}{% endfor %}">
-  
+
   <meta name="robots" content="index, follow">
   <!-- Schema.org -->
   <meta itemprop="name" content="{{ page.title | append: ' | ' }}{{ site.title }}">
@@ -22,7 +22,7 @@
   <meta property="og:title" content="{{ site.title | append: ' | '}}{{ page.title }}">
   <meta property="og:type" content="article" />
   <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
-  {% if page.img-path %}<meta property="og:image" content="{{ "{{ page.img-path | prepend: site.baseurl | prepend: site.url }}" />{% endif %}"
+  {% if page.img-path %}<meta property="og:image" content="{{ page.img-path | prepend: site.baseurl | prepend: site.url }}" />{% endif %}
   <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description | truncate: 160 }}{% endif %}" />
   <meta property="og:site_name" content="{{ site.title }}" />
   <meta property="article:tag" content="{{ page.title }}" />

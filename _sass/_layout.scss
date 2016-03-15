@@ -384,7 +384,7 @@ section#services-container, section#related-sections {
     padding: 0 2.5%;
     color: $white-color;
     text-align: center;
-    margin-bottom: $spacing-unit; 
+    margin-bottom: $spacing-unit;
     img { margin: 0; }
     div.mask { @extend %ease-in; }
 
@@ -468,6 +468,7 @@ section#services-container, section#related-sections {
   span.post-meta {
     float: right;
     display: table;
+    @include media-query($on-mobile) { font-size: 1.4rem; }
   }
 
   span.pocket-icon {

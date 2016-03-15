@@ -760,6 +760,9 @@ a.index-button {
   .post-list span.post-meta {
     float: right;
     display: table; }
+    @media screen and (max-width: 600px) {
+      .post-list span.post-meta {
+        font-size: 1.4rem; } }
   .post-list span.pocket-icon svg {
     width: 2rem;
     height: 2rem; }
