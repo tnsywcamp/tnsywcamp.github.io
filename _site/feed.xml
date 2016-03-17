@@ -5,17 +5,15 @@
     <description>a free Jekyll theme for organizations and non-profits</description>
     <link>https://damianeoloan.github.io/JekyllOrg/</link>
     <atom:link href="https://damianeoloan.github.io/JekyllOrg/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 17 Mar 2016 11:34:44 +0000</pubDate>
-    <lastBuildDate>Thu, 17 Mar 2016 11:34:44 +0000</lastBuildDate>
+    <pubDate>Thu, 17 Mar 2016 11:48:31 +0000</pubDate>
+    <lastBuildDate>Thu, 17 Mar 2016 11:48:31 +0000</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
         <title>Welcome to JekyllOrg</title>
-        <description>&lt;p&gt;JekyllOrg is a free Jekyll theme for for small organizations and non-profits.&lt;/p&gt;
+        <description>&lt;p&gt;JekyllOrg enables organizations and non-profits to easily create their own website at zero cost.&lt;/p&gt;
 
-&lt;p&gt;You can &lt;a href=&quot;https://github.com/damianeoloan/JekyllOrg/&quot;&gt;clone this website&lt;/a&gt; and configure it according to your requirements. As it’s based on Jekyll, you can host your site free on Github Pages.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/JekyllOrg/news/setup/&quot;&gt;How to set up your website&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Grab a coffee and learn &lt;a href=&quot;/JekyllOrg/news/setup/&quot;&gt;how to set up your website&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Tue, 01 Mar 2016 00:00:00 +0000</pubDate>
         <link>https://damianeoloan.github.io/JekyllOrg/news/welcome-to-jekyll/</link>
