@@ -318,7 +318,7 @@ div.text-box {
 .page-header {
   position: relative;
   display: block;
-  margin: 0 0 $spacing-unit;
+  margin: 1rem 0 $spacing-unit;
   padding: 0;
   min-height: 50vh;
   max-height: 80vh;
@@ -848,6 +848,9 @@ a.careers-link {
 /**
  * Homepage
  */
+section.home-feature {
+  margin-top: -$spacing-unit/2;
+}
 a h2.home-header {
   display: table;
   padding-bottom: $spacing-unit/2;
