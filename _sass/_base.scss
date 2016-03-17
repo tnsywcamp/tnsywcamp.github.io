@@ -294,18 +294,19 @@ pre, code {
 }
 
 code {
-  padding: 1rem 1.6rem;
+  padding: 0 0.2rem;
   overflow-x: auto;
+  display: inline-block;
 }
 pre {
   padding: 1rem 1.6rem;
-  margin: 0 auto $spacing-unit;
+  margin: 0 auto;
   text-align: left;
   > code {
     border: 0;
     padding-right: 0;
     padding-left: 0;
-    overflow-x: auto;
+    overflow: auto;
   }
 }
 /**

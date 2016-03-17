@@ -5,6 +5,6 @@ date:   2016-03-01
 ---
 JekyllOrg is a free Jekyll theme for for small organizations and non-profits.
 
-You can fork the Github repo then configure and update your site with Prose.io.
+You can [clone this website](https://github.com/damianeoloan/JekyllOrg/) and configure it according to your requirements. As it's based on Jekyll, you can host your site free on Github Pages.
 
-[How to set up your website](/README.md)
+[How to set up your website](/JekyllOrg/news/setup/)

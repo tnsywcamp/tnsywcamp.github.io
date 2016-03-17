@@ -204,7 +204,7 @@ input#ctrl:checked~nav.menu a.nav-link {
   }
   li:hover {
     svg {
-      path { fill: $dark-grey; }
+      path { fill: $blue-color; }
     }
   }
 }
@@ -257,7 +257,10 @@ span.copyright, span.made-with {
   @include media-query($on-mobile) { font-size: 1.2rem; }
 }
 
-span.copyright { float: left; }
+span.copyright {
+  float: left;
+  font-weight: 400;
+}
 
 span.made-with {
   float: right;
@@ -780,7 +783,7 @@ section.team-members {
         }
 
         &:hover {
-          rect { fill: $dark-grey; }
+          rect { fill: $blue-color; }
         }
       }
     }
