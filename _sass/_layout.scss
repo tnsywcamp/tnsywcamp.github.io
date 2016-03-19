@@ -723,7 +723,7 @@ div#map_wrapper {
 /**
  * About page
  */
-section.office-locations, section.team-members, p.page-intro {
+section.office-locations, section.team-members, p.page-intro, section#contact {
   width: 75%;
   margin: 0 auto $spacing-unit;
   position: relative;
@@ -810,6 +810,34 @@ div.member-container.one-half.col {
   }
 }
 
+section#contact {
+  input.email, input.name, textarea {
+    display: block;
+    width: 75%;
+    margin: 0 auto $spacing-unit;
+    background: $light-grey;
+    border: none;
+    padding: 1rem .5rem;
+    @include media-query($on-mobile) { width: 85%; }
+  }
+  button.send {
+    display: block;
+    margin: 0 auto $spacing-unit;
+    border: 1px solid $dark-grey;
+    background: $white-color;
+    color: $dark-grey;
+    font-weight: 400;
+    padding: $spacing-unit/2 $spacing-unit;
+    @extend %ease-in;
+    &:hover {
+      color: $blue-color;
+      border: 1px solid $blue-color;
+    }
+  }
+  div.status {
+    text-align: center;
+  }
+}
 /**
  * Careers
  */

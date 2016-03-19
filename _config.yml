@@ -21,7 +21,11 @@ periscope_username: randomexample
 reddit_username: u/randomexample
 twitter_username: randomexample
 youtube_username: user/randomexample
-email: random@example.com
+email: damianoloan0@gmail.com
+
+# API keys
+api_keys:
+  google: "AIzaSyBTrns7kOi-WxTG7d-IrwzApkn4JvlCL5c"
 
 # Build settings
 markdown: kramdown

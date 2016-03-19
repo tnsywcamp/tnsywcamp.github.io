@@ -593,7 +593,7 @@ a {
 /**
  * Helpers
  */
-div.pagination a:before, nav.menu a.nav-link:after, .social-media-list li svg path, a.footer-nav, span.made-with a, a.button, .page-header h1, .page-header p, section#services-container a li div.mask, section#related-sections a li div.mask, section#services-container a li div.tn-container h2, section#services-container a li div.tn-container p, section#related-sections a li div.tn-container h2, section#related-sections a li div.tn-container p, a.index-button, .post-list > li, .post-list a, .post-list span.pocket-icon svg path, ul.social-share-list li svg, .post-content a:before, ul.events-index li.event, section.team-members figure figcaption svg rect, a.careers-link, a h2.home-header {
+div.pagination a:before, nav.menu a.nav-link:after, .social-media-list li svg path, a.footer-nav, span.made-with a, a.button, .page-header h1, .page-header p, section#services-container a li div.mask, section#related-sections a li div.mask, section#services-container a li div.tn-container h2, section#services-container a li div.tn-container p, section#related-sections a li div.tn-container h2, section#related-sections a li div.tn-container p, a.index-button, .post-list > li, .post-list a, .post-list span.pocket-icon svg path, ul.social-share-list li svg, .post-content a:before, ul.events-index li.event, section.team-members figure figcaption svg rect, section#contact button.send, a.careers-link, a h2.home-header {
   -webkit-transition: all 250ms ease-in;
   transition: all 250ms ease-in; }
 
@@ -966,15 +966,15 @@ div#map_wrapper {
 /**
  * About page
  */
-section.office-locations, section.team-members, p.page-intro {
+section.office-locations, section.team-members, p.page-intro, section#contact {
   width: 75%;
   margin: 0 auto 2rem;
   position: relative; }
   @media screen and (max-width: 1020px) {
-    section.office-locations, section.team-members, p.page-intro {
+    section.office-locations, section.team-members, p.page-intro, section#contact {
       width: 80%; } }
   @media screen and (max-width: 600px) {
-    section.office-locations, section.team-members, p.page-intro {
+    section.office-locations, section.team-members, p.page-intro, section#contact {
       width: 95%; } }
 
 #aboutmap_wrapper {
@@ -1033,6 +1033,30 @@ section.team-members .final-col {
     display: block;
     width: 90%;
     margin: 0 auto 2rem; } }
+
+section#contact input.email, section#contact input.name, section#contact textarea {
+  display: block;
+  width: 75%;
+  margin: 0 auto 2rem;
+  background: #f4f4f4;
+  border: none;
+  padding: 1rem .5rem; }
+  @media screen and (max-width: 600px) {
+    section#contact input.email, section#contact input.name, section#contact textarea {
+      width: 85%; } }
+section#contact button.send {
+  display: block;
+  margin: 0 auto 2rem;
+  border: 1px solid #2e2e2e;
+  background: #fdfdfd;
+  color: #2e2e2e;
+  font-weight: 400;
+  padding: 1rem 2rem; }
+  section#contact button.send:hover {
+    color: #46bcec;
+    border: 1px solid #46bcec; }
+section#contact div.status {
+  text-align: center; }
 
 /**
  * Careers
