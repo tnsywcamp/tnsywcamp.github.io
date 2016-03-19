@@ -1056,7 +1056,17 @@ section#contact button.send {
     color: #46bcec;
     border: 1px solid #46bcec; }
 section#contact div.status {
-  text-align: center; }
+  display: table;
+  margin: 0 auto 1rem;
+  text-align: center;
+  font-weight: 400;
+  padding: 1rem 2rem; }
+section#contact div.failure {
+  color: #e0021f;
+  border: 1px solid #e0021f; }
+section#contact div.success {
+  color: #47edc9;
+  border: 1px solid #47edc9; }
 
 /**
  * Careers
