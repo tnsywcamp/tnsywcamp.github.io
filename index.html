@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Home
 ---
 <!-- Homepage feature -->
 <div class="home">
@@ -7,12 +8,12 @@ layout: default
     <header class="page-header no-margin">
       <div class="mask"></div>
       <img src="{{ 'home' | append: '.jpg' | prepend: '/images/featured/' | prepend: site.baseurl }}" alt="{{ page.title | append: ' featured image' }}" class="page-hero" />
+      <img src="{{ 'home' | append: '-tn.jpg' | prepend: '/images/featured/' | prepend: site.baseurl }}" alt="{{ page.title | append: ' featured image' }}" class="mobile-hero" />
       <div class="text-box">
         <p>{{ site.description }}</p>
-        <h1 class="page-title">{{ site.name }}</h1>
 
         <nav class="menu">
-          <a href="{{ '/' | prepend: site.baseurl }}" class="nav-title"><h1>{{ site.title }}</h1></a>
+          <a href="{{ '/' | prepend: site.baseurl }}" class="nav-title {% if site.title.size > 9 %}long-title{% endif %}"><h1>{{ site.title }}</h1></a>
           {% for link in site.data.nav-links %}
             <a class="nav-link" href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a>
           {% endfor %}
@@ -24,12 +25,12 @@ layout: default
   <!-- Homepage news selection -->
   <section id="homepage-news">
     <ul class="post-list">
-      <a href="/blog/index.html" title="{{ site.title | prepend: 'Latest News from ' }}">
+      <a href="{{ '/blog/index.html' | prepend: site.baseurl }}" title="{{ site.title | prepend: 'Latest News from ' }}">
         <h2 class="home-header">Latest News</h2>
       </a>
       {% for post in site.posts | limit:3 %}
       <li>
-        <a href="https://getpocket.com/save?url={{ post.url }}&title={{ post.title }}" title="Save to Pocket" target="_blank">
+        <a href="https://getpocket.com/save?url={{ post.url | prepend: site.baseurl | prepend: site.url }}&title={{ post.title }}" title="Save to Pocket" target="_blank">
           <span class="pocket-icon">
             <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M12.533 6.84L8.77 10.45c-.213.204-.486.306-.76.306-.273 0-.547-.102-.76-.306L3.488 6.84c-.437-.418-.45-1.113-.032-1.55.42-.438 1.114-.452 1.55-.033l3.005 2.88 3.005-2.88c.436-.42 1.13-.405 1.55.032.42.437.405 1.13-.032 1.55zm3.388-5.028c-.207-.572-.755-.956-1.363-.956H1.45c-.6 0-1.144.376-1.357.936-.063.166-.095.34-.095.515v4.828l.055.96c.232 2.184 1.365 4.092 3.12 5.423.03.024.063.047.095.07l.02.015c.94.687 1.992 1.152 3.128 1.382.524.105 1.06.16 1.592.16.492 0 .986-.046 1.472-.136.058-.013.116-.023.175-.037.016-.002.033-.01.05-.018 1.088-.237 2.098-.69 3.004-1.352l.02-.014.096-.072c1.754-1.33 2.887-3.24 3.12-5.423l.054-.96V2.307c0-.167-.02-.333-.08-.495z" fill-rule="nonzero"/></svg>
           </span>
@@ -46,25 +47,25 @@ layout: default
           <p>{{ post.excerpt | truncatewords: 30 }}</p>
         </a>
 
-        <a href="{{ post.url }}" class="index-button">read on...</a>
+        <a href="{{ post.url | prepend: site.baseurl }}" class="index-button">read on...</a>
       </li>
       {% endfor %}
     </ul>
 
-    <a href="/blog/index.html" title="{{ site.title | prepend: 'Latest News from ' }}" class="button">See All News</a>
+    <a href="{{ '/blog/index.html' | prepend: site.baseurl }}" title="{{ site.title | prepend: 'Latest News from ' }}" class="button">See All News</a>
   </section><!-- End homepage news selection -->
   <!-- Homepage services selection -->
   <section id="services-container" class="homepage-services">
-    <a href="/services" title="{{ site.title | append: ' Services' }}">
+    <a href="{{ '/services' | prepend: site.baseurl }}" title="{{ site.title | append: ' Services' }}">
       <h2 class="home-header">Services</h2>
     </a>
     <ul class="grid-container">
       {% for service in site.services limit:3 %}
-      <a href="{{ service.url }}">
+      <a href="{{ service.url | prepend: site.baseurl }}">
         {% if forloop.length <= 2 %}
         <li class="one-whole col">
         {% else %}
-        <li class="one-third col">
+        <li class="one-third col{% if forloop.last == true %} final-col{% endif %}">
         {% endif %}
           <div class="tn-container">
             <img src="{{ 'services-tn.jpg' | prepend: '/images/featured/' | prepend: site.baseurl }}" alt="{{  }}" />
@@ -78,17 +79,17 @@ layout: default
       </a>
       {% endfor %}
 
-      <a href="/services" title="{{ site.title | prepend: 'See All ' | append: ' Services' }}" class="button">See All Services</a>
+      <a href="{{ '/services' | prepend: site.baseurl }}" title="{{ site.title | prepend: 'See All ' | append: ' Services' }}" class="button home-button">See All Services</a>
     </ul>
   </section><!-- End homepage services selection -->
   <!-- Homepage events selection -->
   <section id="homepage-events">
     <ul class="events-index">
-      <a href="/events" title="{{ site.title | append: ' Events' }}">
+      <a href="{{ '/events' | prepend: site.baseurl }}" title="{{ site.title | append: ' Events' }}">
         <h2 class="home-header">Events</h2>
       </a>
       {% for event in site.events limit:3 %}
-      <a href="{{ event.url }}">
+      <a href="{{ event.url | prepend: site.baseurl }}">
         <li class="event">
           <!-- Social shares -->
           <ul class="social-share-list">
@@ -111,7 +112,7 @@ layout: default
             </a>
           </ul><!-- End social shares -->
           <span class="event-meta">{{ event.start-date | date: '%R, %b %-d, %Y' }}</span>
-          <a href="{{ event.url }}"><h2>{{ event.title }}</h2></a>
+          <a href="{{ event.url | prepend: site.baseurl }}"><h2>{{ event.title }}</h2></a>
 
           {% if event.location %}
           <span class="event-icon">
@@ -124,27 +125,27 @@ layout: default
 
           {% if event.description %}<p>{{ event.description }}</p>{% endif %}
 
-          <a href="{{ event.url }}" class="index-button">see event details</a>
+          <a href="{{ event.url | prepend: site.baseurl }}" class="index-button">see event details</a>
         </li>
       </a>
       {% endfor %}
     </ul>
 
-    <a href="/events" title="{{ site.title | prepend: 'See All ' | append: ' Events' }}" class="button">See All Events</a>
+    <a href="{{ '/events' | prepend: site.baseurl }}" title="{{ site.title | prepend: 'See All ' | append: ' Events' }}" class="button">See All Events</a>
   </section><!-- End homepage events selection -->
   <!-- Homepage issues selection -->
   <section id="services-container" class="homepage-issues">
-    <a href="/issues/" title="{{ site.title | append: ' Issues' }}">
+    <a href="{{ '/issues' | prepend: site.baseurl }}" title="{{ site.title | append: ' Issues' }}">
       <h2 class="home-header">Issues</h2>
     </a>
     <ul class="grid-container">
     {% for issue in site.issues limit:3 %}
       {% unless issue.title == page.title %}
-      <a href="{{ issue.url }}">
+      <a href="{{ issue.url | prepend: site.baseurl }}">
         {% if forloop.length <= 2 %}
         <li class="one-whole col">
         {% else %}
-        <li class="one-third col">
+        <li class="one-third col{% if forloop.last == true %} final-col{% endif %}">
           {% endif %}
           <div class="tn-container">
             <img src="{{ 'issues-tn.jpg' | prepend: '/images/featured/' | prepend: site.baseurl }}" alt="{{  }}" />
@@ -158,7 +159,7 @@ layout: default
       </a>
       {% endunless %}
     {% endfor %}
-    <a href="/issues" title="See All Issues" class="button">See All Issues</a>
+    <a href="{{ '/issues' | prepend: site.baseurl }}" title="See All Issues" class="button home-button">See All Issues</a>
 
     </ul>
   </section><!-- End homepage issues selection -->

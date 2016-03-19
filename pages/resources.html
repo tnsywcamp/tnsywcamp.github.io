@@ -3,6 +3,7 @@ layout: page
 title: Resources
 description: add a short introduction to your policy papers, briefing notes, etc. here
 permalink: /resources/
+related: issues services events
 ---
 <ul class="post-list resource-index">
 {% for resource in site.data.resources %}
@@ -17,7 +18,9 @@ permalink: /resources/
       <p>{{ resource.description | truncatewords: 30 }}</p>
     </a>
 
-    <a href="{{ resource.path }}" class="index-button">read the document</a>
+    <a href="{{ resource.path | prepend: site.baseurl }}" class="index-button">read the document</a>
   </li>
 {% endfor %}
 </ul>
+
+{% include related-sections.html %}

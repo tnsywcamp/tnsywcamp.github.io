@@ -1,13 +1,14 @@
 ---
 layout: page
 title: Events
-permalink: /events/
 description: add a short introduction to the events you organise here
+permalink: /events/
+related: services resources issues
 ---
 <!-- Events index -->
 <ul class="events-index">
 {% for event in site.events %}
-  <a href="{{ event.url }}">
+  <a href="{{ event.url | prepend: site.baseurl }}">
     <li class="event">
       <!-- Social shares -->
       <ul class="social-share-list">
@@ -30,7 +31,7 @@ description: add a short introduction to the events you organise here
         </a>
       </ul><!-- End social shares -->
       <span class="event-meta">{{ event.start-date | date: '%R, %b %-d, %Y' }}</span>
-      <a href="{{ event.url }}"><h2>{{ event.title }}</h2></a>
+      <a href="{{ event.url | prepend: site.baseurl }}"><h2>{{ event.title }}</h2></a>
 
       {% if event.location %}
       <span class="event-icon">
@@ -43,8 +44,10 @@ description: add a short introduction to the events you organise here
 
       {% if event.description %}<p>{{ event.description }}</p>{% endif %}
 
-      <a href="{{ event.url }}" class="index-button">see event details</a>
+      <a href="{{ event.url | prepend: site.baseurl }}" class="index-button">see event details</a>
     </li>
   </a>
 {% endfor %}
 </ul><!-- End events index -->
+
+{% include related-sections.html %}

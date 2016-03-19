@@ -3,18 +3,8 @@ layout: post
 title:  "Welcome to JekyllOrg"
 date:   2016-03-01
 ---
-JekyllOrg is a free Jekyll theme for for small organizations and non-profits.
+JekyllOrg enables organizations and non-profits to easily create their own website at zero cost.
 
-You can fork the Github repo then configure and update your site with Prose.io.
+By simply copying this site and replacing a few lines in a few files you'll make it your own. Have a look around and see if it meets your needs - if you have any feedback or requests, feel free to [get in touch](mailto:damianoloan0@gmail.com?subject=JekyllOrg Feedback).
 
-Your website includes sections for the services you offer, issues you work on, news updates, a press library and a donations feature.
-
-{% for post in site.posts %}
-  {% unless forloop.last == true %}
-  {{ post.date }}
-  {% else %}
-  {{ post.title }}
-  {% endunless %}
-{% endfor %}
-
-[How to set up your website](/setup)
+Otherwise, grab a coffee and learn [how to set up your website](/JekyllOrg/news/setup/).

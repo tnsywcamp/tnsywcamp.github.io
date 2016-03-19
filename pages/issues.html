@@ -1,14 +1,15 @@
 ---
 layout: page
 title: Issues
-permalink: /issues/
 description: add a short introduction to the issues you address here
+permalink: /issues/
+related: services resources events
 ---
 <section id="services-container">
   <ul class="grid-container">
   {% for issue in site.issues %}
     {% unless issue.title == page.title %}
-    <a href="{{ issue.url }}">
+    <a href="{{ issue.url | prepend: site.baseurl }}">
       {% if forloop.length == 2 %}
       <li class="one-whole col">
       {% elsif forloop.length == 3 %}
@@ -30,3 +31,5 @@ description: add a short introduction to the issues you address here
   {% endfor %}
   </ul>
 </section>
+
+{% include related-sections.html %}

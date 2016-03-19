@@ -2,17 +2,17 @@
 layout: post
 title:  A Post Style Guide
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Donec a diam lectus.]({{ page.url }}) Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero @jekyllrb egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.
+This post displays how your article elements will appear. Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Donec a diam lectus.]({{ page.url | prepend: site.baseurl }}) Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero @jekyllrb egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.
 
-##This is a h2
+## This is a h2
 
-###This is a h3
+### This is a h3
 
-####This is a h4
+#### This is a h4
 
-#####This is a h5
+##### This is a h5
 
-######This is a h6
+###### This is a h6
 
 > Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.
 
@@ -42,4 +42,4 @@ term
 </div>
 ~~~
 
-`for cat in site.cats`
+`{% raw %}{% for cat in site.cats %}{% endraw %}`
