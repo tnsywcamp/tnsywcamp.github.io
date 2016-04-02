@@ -444,7 +444,7 @@ section#services-container, section#related-sections {
    @extend %ease-in;
  }
 
-.post-list {
+.post-list, .meetings-list {
   display: block;
   margin: 0 auto $spacing-unit;
   width: 60%;
@@ -882,7 +882,7 @@ a.careers-link {
 section.home-feature {
   margin-top: -$spacing-unit/2;
 }
-a h2.home-header {
+h2.meetings-header {
   display: table;
   padding-bottom: $spacing-unit/2;
   border-bottom: 2px solid $blue-color;

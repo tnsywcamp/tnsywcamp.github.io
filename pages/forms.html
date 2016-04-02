@@ -1,0 +1,23 @@
+---
+layout: page
+title: Forms
+description: ""
+permalink: /forms/
+---
+<section>
+  <ul class="post-list resource-index">
+    {% for form in site.data.forms %}
+    <li>
+      <h2>
+        <a class="post-link" href="{{ form.path | prepend: site.baseurl }}">{{ form.title }}</a>
+      </h2>
+
+      <a class="post-link" href="{{ form.path | prepend: site.baseurl }}">
+        <p>{{ form.description }}</p>
+      </a>
+
+      <a href="{{ form.path | prepend: site.baseurl }}" class="index-button">view the form</a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

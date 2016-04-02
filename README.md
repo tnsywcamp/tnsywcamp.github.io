@@ -1,5 +1,3 @@
-# JekyllOrg
+# Tucson North Stake YW Camp 2016 Website
 
-A Jekyll theme for organizations and non-profits
-
-[Setup guide here](http://damianeoloan.github.io/JekyllOrg/news/setup/)
+A Jekyll powered site for camp registration and resources

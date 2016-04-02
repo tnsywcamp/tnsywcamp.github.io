@@ -593,7 +593,7 @@ a {
 /**
  * Helpers
  */
-div.pagination a:before, nav.menu a.nav-link:after, .social-media-list li svg path, a.footer-nav, span.made-with a, a.button, .page-header h1, .page-header p, section#services-container a li div.mask, section#related-sections a li div.mask, section#services-container a li div.tn-container h2, section#services-container a li div.tn-container p, section#related-sections a li div.tn-container h2, section#related-sections a li div.tn-container p, a.index-button, .post-list > li, .post-list a, .post-list span.pocket-icon svg path, ul.social-share-list li svg, .post-content a:before, ul.events-index li.event, section.team-members figure figcaption svg rect, section#contact button.send, a.careers-link, a h2.home-header {
+div.pagination a:before, nav.menu a.nav-link:after, .social-media-list li svg path, a.footer-nav, span.made-with a, a.button, .page-header h1, .page-header p, section#services-container a li div.mask, section#related-sections a li div.mask, section#services-container a li div.tn-container h2, section#services-container a li div.tn-container p, section#related-sections a li div.tn-container h2, section#related-sections a li div.tn-container p, a.index-button, .post-list > li, .meetings-list > li, .post-list a, .meetings-list a, .post-list span.pocket-icon svg path, .meetings-list span.pocket-icon svg path, ul.social-share-list li svg, .post-content a:before, ul.events-index li.event, section.team-members figure figcaption svg rect, section#contact button.send, a.careers-link, h2.meetings-header {
   -webkit-transition: all 250ms ease-in;
   transition: all 250ms ease-in; }
 
@@ -744,46 +744,46 @@ a.index-button {
   display: none;
   font-weight: 400; }
 
-.post-list {
+.post-list, .meetings-list {
   display: block;
   margin: 0 auto 2rem;
   width: 60%;
   list-style: none; }
-  .post-list > li {
+  .post-list > li, .meetings-list > li {
     margin-bottom: 2rem;
     padding: 2rem; }
-  .post-list li:nth-of-type(even) {
+  .post-list li:nth-of-type(even), .meetings-list li:nth-of-type(even) {
     background: #e5e5e5; }
-  .post-list a {
+  .post-list a, .meetings-list a {
     text-decoration: none;
     color: #2e2e2e; }
-  .post-list h2 a:hover {
+  .post-list h2 a:hover, .meetings-list h2 a:hover {
     color: #46bcec; }
-  .post-list span.post-meta {
+  .post-list span.post-meta, .meetings-list span.post-meta {
     float: right;
     display: table; }
     @media screen and (max-width: 600px) {
-      .post-list span.post-meta {
+      .post-list span.post-meta, .meetings-list span.post-meta {
         font-size: 1.4rem; } }
-  .post-list span.pocket-icon svg {
+  .post-list span.pocket-icon svg, .meetings-list span.pocket-icon svg {
     width: 2rem;
     height: 2rem; }
-    .post-list span.pocket-icon svg path {
+    .post-list span.pocket-icon svg path, .meetings-list span.pocket-icon svg path {
       fill: #a5a5a5; }
-    .post-list span.pocket-icon svg:hover path {
+    .post-list span.pocket-icon svg:hover path, .meetings-list span.pocket-icon svg:hover path {
       fill: #ED4055; }
-  .post-list li:hover {
+  .post-list li:hover, .meetings-list li:hover {
     border-bottom: 0.3rem solid #2e2e2e; }
-    .post-list li:hover a.index-button {
+    .post-list li:hover a.index-button, .meetings-list li:hover a.index-button {
       display: table; }
-  .post-list a.index-button:hover {
+  .post-list a.index-button:hover, .meetings-list a.index-button:hover {
     color: #46bcec;
     border: 0.15rem solid #46bcec; }
   @media screen and (max-width: 1020px) {
-    .post-list {
+    .post-list, .meetings-list {
       width: 66.66666666%; } }
   @media screen and (max-width: 600px) {
-    .post-list {
+    .post-list, .meetings-list {
       width: 80%; } }
 
 .post-meta {
@@ -1100,12 +1100,12 @@ a.careers-link {
 section.home-feature {
   margin-top: -1rem; }
 
-a h2.home-header {
+h2.meetings-header {
   display: table;
   padding-bottom: 1rem;
   border-bottom: 2px solid #46bcec;
   color: #2e2e2e; }
-  a h2.home-header:hover {
+  h2.meetings-header:hover {
     color: #46bcec; }
 
 /**
