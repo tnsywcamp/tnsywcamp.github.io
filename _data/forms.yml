@@ -1,12 +1,27 @@
 - title: Parental Permission Medical Release Form
   description: This needs to be printed, completed, and submitted to your ward leader.
   path: /forms/parental-permission-medical-release.pdf
-- title: Camp Schedule
+- title: Tentative Camp Schedule, subject to change
   description:
-  path: /forms/CampSchedule2015.pdf
-- title: Camp Zion Policies
+  path: /forms/Proposed camp schedule 2016.pdf
+- title: Money Summary Sheet
+  description: FYI- various costs
+  path: /forms/2015MoneySummary_Sheet.xls
+  - title: Camp Zion Policies
   description: Please be familiar with these expecations.
   path: /forms/CampZionGirlsCampPolicies.pdf
-- title: Final Checklist
-  description: Leaders please fill this out for a final headcount
-  path: /forms/TNS_Final_YW_Camp_Checklist.xls
+  - title: 1st Year Packing List
+  description: 
+  path: /forms/First Year Packing List.pdf
+  - title: 2nd Year Packing List
+  description: 
+  path: /forms/Second Year Packing List.pdf
+    - title: 3rd Year Packing List
+  description: 
+  path: /forms/Third Year Packing List.pdf
+  - title: 4th Year Packing List
+  description: 
+  path: /forms/Fourth year packing list.pdf
+    - title: YCL Packing List
+  description: 
+  path: /forms/YCL Packing List.pdf
