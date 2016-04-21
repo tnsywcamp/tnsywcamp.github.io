@@ -258,6 +258,10 @@ table {
      width: 100%;
    }
  }
+
+a {
+  @extend %link;
+}
 /**
  * Blockquotes
  */
